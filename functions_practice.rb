@@ -1,60 +1,61 @@
 # 1. Write a function that takes in a number and returns the number times two. Then run the function and print the result.
-# def number(number)
-# number * 2
+# def multiply(num)
+#   num * 2
 # end
-#
-# p number(3)
+
+# p multiply(3)
+
 # 2. Write a function that takes in a string and returns the string with all capital letters. Then run the function and print the result.
-# def string(string)
+# def captial(string)
 #   string.upcase
 # end
 
-# p string("dog")
+# p captial("string")
 # 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
-# def numbers(number1, number2)
-#   number1 - number2
+# def subtract(num1, num2)
+#   num1 - num2
 # end
 
-# p numbers(4, 1)
+# p subtract(4, 2)
 # 4. Write a function that takes in a number and returns the number times itself. Then run the function and print the result.
-# def number(number)
-# number *= number
+# def multiply(num)
+#   num * num
 # end
-#
-# p number(5)
+
+# p multiply(4)
 # 5. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
-# def string(string)
+# def first(string)
 #   string[0]
 # end
 
-# p string("hi")
+# p first("hi")
 # 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
-# def strings(string1, string2, string3)
-# string1 + " " + string2 + " " + string3
-# end
-#
-# p strings("the", "cat", "ate")
-# 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
-# def number(number)
-#   number.to_s
+# def combine(str1, str2, str3)
+#   str1 + " " + str2 + " " + str3
 # end
 
-# p number(5)
+# p combine("cat", "dog", "bat")
+# 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
+# def number(num)
+#   num.to_s
+# end
+
+# p number(3)
 # 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
-# def string(string)
+# def repeat(string)
 #   string * 5
 # end
 
-# p string("hi")
+# p repeat("cat")
 # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
-# def numbers(number1, number2, number3)
-#   (number1 + number2 + number3) / 3
+# def average(num1, num2, num3)
+# (num1 + num2 + num3) / 3
 # end
-
-# p numbers(20, 8, 4)
+#
+# p average(3, 4, 5)
 # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
-# def number(number)
-#   (number * 10) + 30
+# def times(num)
+#   (num * 10) + 30
 # end
 
-# p number(2)
+# p times(45)
