@@ -32,3 +32,17 @@ array.each do |num|
 end
 
 p new_array
+
+def less_than_100(array)
+  i = 0
+  new_arr = []
+  while i < array.length
+    if array[i] < 100
+      new_arr << array[i]
+    end
+    i += 1
+  end
+  return new_arr
+end
+
+p less_than_100([99, 101, 88, 4, 2000, 50])
