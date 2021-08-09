@@ -159,3 +159,20 @@
 # end
 # p new_arr
 # p arr.map { |str| str.to_s }
+
+# 10. Start with an array of numbers and create a new array with each number converted into a string.
+#     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+# arr = [1, 2, 3]
+def string(arr)
+  new_arr = []
+  i = 0
+  while i < arr.length
+    new_arr << arr[i].to_s
+    i += 1
+  end
+
+  return new_arr
+end
+
+p string([1, 2, 3])
