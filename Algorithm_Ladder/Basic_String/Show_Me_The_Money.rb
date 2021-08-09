@@ -7,18 +7,15 @@
 # Output: false
 
 def money(string)
-  response = true
   i = 0
   while i < string.length
-    while string[i] != "$"
-      response = false
-      if string[i] == "$"
-        response = true
-      end
+    if string[i] == "$"
+      return true
     end
     i += 1
   end
-  return response
+  return false
 end
 
 p money("i hate $ but i love money i know i know im crazy")
+p money("abcdefghijklmnopqrstuvwxyz")
