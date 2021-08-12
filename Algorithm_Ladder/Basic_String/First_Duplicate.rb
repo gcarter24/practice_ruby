@@ -4,18 +4,16 @@
 # Output: “h”
 
 def first_repeat(string)
-  i = 0 #a
-  j = 1 #b
-  while i < string.length #0
-    while j < string.length #1
-      if string[i] == string[j]
-        return string[i]
-      end
-      i += 1
+  repeat = {}
+  i = 0
+  while i < string.length
+    if repeat[string[i]]
+      return string[i]
     end
-    j += 1
+    repeat[string[i]] = true
+    i += 1
   end
-  # return string[i]
+  return -1
 end
 
 p first_repeat("abcdefghhijkkloooop")
