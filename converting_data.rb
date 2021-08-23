@@ -396,6 +396,17 @@ end
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
+string = "bookkeeper"
+i = 0
+hash = {}
+
+while i < string.length
+  if hash[i] == nil
+  i  += 1
+end 
+
+p hash
+
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 

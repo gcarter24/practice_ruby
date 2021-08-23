@@ -1,0 +1,18 @@
+# Given ONE array of strings, return a new array that contains every combination of each string with every other string in the array.
+
+# Input: ["a", "b", "c", "d"]
+# Output: ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"]
+
+array = ["a", "b", "c", "d"]
+new_array = []
+i = 0
+j = 1
+
+while i < array.length
+  while j < array.length
+    j += 1
+  end
+  i += 1
+end
+
+p new_array
