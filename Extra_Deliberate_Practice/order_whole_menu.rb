@@ -10,7 +10,7 @@ hash = { "hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, 
 
 sum = 0
 hash.each do |k, v|
-  # p k
+  k
   sum += v
 end
 
