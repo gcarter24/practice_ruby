@@ -41,20 +41,27 @@
 #   {title: "The Two Towers", year: 1954 }
 #   ]
 
-array = [{ title: "The Lord of the Rings", author: "J. R. R. Tolkien", year: 1954 }]
+array = [
+  { title: "The Lord of the Rings", author: "J. R. R. Tolkien", year: 1954 },
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+  { title: "1984", author: "George Orwell", year: 1949 },
+  { title: "Go Set a Watchman", author: "Harper Lee", year: 2015 },
+  { title: "The Hobbit", author: "J. R. R. Tolkien", year: 1937 },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+  { title: "The Two Towers", author: "J. R. R. Tolkien", year: 1954 },
+]
 
 def author(array)
-  new_hash = {}
-  array.each do |book|
-    new_array = []
+  hash = {}
+  i = 0
+  while i < array.length
+    key = array[i][:author]
+    value = array[i]
     # key = book[:author]
-    value1 = { title: book[:title], year: book[:year] }
-    new_array << value1
-    p new_array
+    hash[key] = value
+    i += 1
   end
-  key = array[:author]
-  new_hash = key => new_array
-  return new_hash
+  return hash
 end
 
 p author(array)

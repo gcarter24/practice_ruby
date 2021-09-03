@@ -17,7 +17,10 @@ def prime(number)
     return false if number % n == 0
     n += 1
   end
+  if number == 1
+    return false
+  end
   return true
 end
 
-p prime(4)
+p prime(1)

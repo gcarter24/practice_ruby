@@ -5,19 +5,18 @@
 # If the number is divisible by both 3 and 5, print out "FIZZBUZZ".
 
 def fizzbuzz(num) #15
-  i = 1
-  while i <= num
+  (1..num).each do |i|
     if i % 3 == 0 && i % 5 == 0
-      p "fizzbuzz"
+      puts "fizzbuzz"
     elsif i % 3 == 0
-      p "fizz"
+      puts "fizz"
     elsif i % 5 == 0
-      p "buzz"
+      puts "buzz"
     else
-      p i
+      puts i
     end
     i += 1
   end
 end
 
-p fizzbuzz(15)
+p fizzbuzz(30)
