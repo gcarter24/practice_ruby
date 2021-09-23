@@ -3,16 +3,20 @@
 # Input: ["a", "b", "c", "d"]
 # Output: ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"]
 
-array = ["a", "b", "c", "d"]
-new_array = []
-i = 0
-j = 1
-
-while i < array.length
-  while j < array.length
-    j += 1
+def array_mesh(array)
+  new_array = []
+  i = 0
+  while i < array.length
+    j = 0
+    while j < array.length
+      if array[i] != array[j]
+        new_array << array[i] + array[j]
+      end
+      j += 1
+    end
+    i += 1
   end
-  i += 1
+  return new_array
 end
 
-p new_array
+p array_mesh(["a", "b", "c", "d"])

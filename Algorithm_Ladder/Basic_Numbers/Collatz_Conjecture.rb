@@ -26,17 +26,28 @@
 #   break
 # return steps
 
-def conjecture(num)
-  steps = 0
-  while num != 1
-    steps += 1
-    if num % 2 == 0
-      num / 2
-    else
-      (num * 3) + 1
-    end
+# def conjecture(n)
+#   array = []
+#   until n == 1
+#     if n % 2 == 0
+#       n / 2
+#       array.push(n)
+#     else
+#       (n * 3) + 1
+#       array.push(n)
+#     end
+#   end
+#   return array
+# end
+
+def conjecture(n)
+  array = [n]
+  until n == 1
+    n = n % 2 == 0 ? n / 2 : 3 * n + 1
+    array.push(n)
+    # array << n
   end
-  return steps
+  return array.count
 end
 
 p conjecture(12)
