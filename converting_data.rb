@@ -365,47 +365,47 @@
 
 #  1. Convert an array of arrays into a hash.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
-def hashes(array)
-  i = 0
-  hash = {}
-  while i < array.length
-    hash[array[i][0]] = array[i][1]
-    i += 1
-  end
-  # array.each do |k, v|
-  #   hash[k] = v
-  # end
-  return hash
-end
+# def hashes(array)
+#   i = 0
+#   hash = {}
+#   while i < array.length
+#     hash[array[i][0]] = array[i][1]
+#     i += 1
+#   end
+#   # array.each do |k, v|
+#   #   hash[k] = v
+#   # end
+#   return hash
+# end
 
-p hashes([[1, 3], [8, 9], [2, 16]])
+# p hashes([[1, 3], [8, 9], [2, 16]])
 #  2. Convert an array of hashes into a hash using the :id key from the array's hashes as the keys in the new hash.
 #     For example, [{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}] becomes {1 => {id: 1, color: "blue", price: 32}, 2 => {id: 2, color: "red", price: 12}}.
 
-arr = [{ id: 1, color: "blue", price: 32 }, { id: 2, color: "red", price: 12 }]
-hash = {}
-i = 0
+# arr = [{ id: 1, color: "blue", price: 32 }, { id: 2, color: "red", price: 12 }]
+# hash = {}
+# i = 0
 
-while i < arr.length
-  key = arr[i][:id]
-  value = arr[i]
-  hash[key] = value
-  i += 1
-end
+# while i < arr.length
+#   key = arr[i][:id]
+#   value = arr[i]
+#   hash[key] = value
+#   i += 1
+# end
 
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
-string = "bookkeeper"
-i = 0
-hash = {}
+# string = "bookkeeper"
+# i = 0
+# hash = {}
 
-while i < string.length
-  if hash[i] == nil
-  i  += 1
-end 
+# while i < string.length
+#   if hash[i] == nil
+#   i  += 1
+# end
 
-p hash
+# p hash
 
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
@@ -427,3 +427,11 @@ p hash
 
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
+
+hash = { "a" => 1, "b" => 2, "c" => 3 }
+new_hash = {}
+hash.each do |k, v|
+  new_hash[v] = k
+end
+
+p new_hash
