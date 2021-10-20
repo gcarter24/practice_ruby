@@ -10,7 +10,7 @@
 # Here are examples of 100 Coolio Arrays:
 
 array = [1, 2, 3, 97, 98, 99]
-# [90, 20, 70, 100, 30, 80, 10]
+# array = [90, 20, 70, 100, 30, 80, 10]
 
 def coolio(array)
   i = array[0]
@@ -23,7 +23,7 @@ def coolio(array)
       else
         false
       end
-      j += 1
+      j -= 1
     end
 
     i += 1
