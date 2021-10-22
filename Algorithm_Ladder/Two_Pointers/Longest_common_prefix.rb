@@ -22,9 +22,9 @@ def longest(array)
   string = ""
 
   while i < array.length
-    j = 0
-    if array[0][0] == array[1][0]
-      string << array[0][0]
+    j = 1
+    if array[i][0] == array[j][0]
+      string << array[i][0]
     end
     i += 1
   end
