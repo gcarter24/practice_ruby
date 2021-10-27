@@ -39,15 +39,19 @@ books = [
   { title: "The Two Towers", author: "J. R. R. Tolkien", year: 1954 },
 ]
 
-authors = {}
+def literature(books)
+  authors = {}
 
-books.each do |book|
-  author = book[:author]
-  title = book[:title]
-  year = book[:year]
-  if authors[author] == nil
-    authors[author] = []
+  books.each do |book|
+    author = book[:author]
+    title = book[:title]
+    year = book[:year]
+    if authors[author] == nil
+      authors[author] = []
+    end
+    authors[author] << { title: title, year: year }
   end
-  authors[author] << { title: title, year: year }
+  return authors
 end
-p authors
+
+p literature(books)
