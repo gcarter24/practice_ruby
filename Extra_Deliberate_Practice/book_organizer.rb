@@ -41,7 +41,7 @@
 #   {title: "The Two Towers", year: 1954 }
 #   ]
 
-array = [
+books = [
   { title: "The Lord of the Rings", author: "J. R. R. Tolkien", year: 1954 },
   { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
   { title: "1984", author: "George Orwell", year: 1949 },
@@ -51,20 +51,22 @@ array = [
   { title: "The Two Towers", author: "J. R. R. Tolkien", year: 1954 },
 ]
 
-def author(array)
-  hash = {}
-  i = 0
-  while i < array.length
-    key = array[i][:author]
-    value = array[i]
-    # key = book[:author]
-    hash[key] = value
-    i += 1
+def literature(books)
+  authors = {}
+
+  books.each do |book|
+    author = book[:author]
+    title = book[:title]
+    year = book[:year]
+    if authors[author] == nil
+      authors[author] = []
+    end
+    authors[author] << { title: title, year: year }
   end
-  return hash
+  return authors
 end
 
-p author(array)
+p literature(books)
 
 # each loop on the array
 # single out the author as the key
