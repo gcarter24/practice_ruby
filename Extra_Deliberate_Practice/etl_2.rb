@@ -74,8 +74,33 @@
 # 'z' => 10
 # }
 
-hash = { 1 => ["A", "E", "I", "O", "U"] }
-
-hash.each do |k, v|
-  p k = k => v.count
+def etl(hash)
+  new_hash = {}
+  hash.each do |k, v|
+    i = 0
+    while i < v.length
+      new_hash[v[i].downcase] = k
+      i += 1
+    end
+  end
+  return new_hash
 end
+
+p etl({
+  1 => ["A", "E", "I", "O", "U"],
+})
+
+p etl({
+    1 => ["A", "E"],
+    2 => ["D", "G"],
+  })
+
+p etl({
+    1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+    2 => ["D", "G"],
+    3 => ["B", "C", "M", "P"],
+    4 => ["F", "H", "V", "W", "Y"],
+    5 => ["K"],
+    8 => ["J", "X"],
+    10 => ["Q", "Z"],
+  })
