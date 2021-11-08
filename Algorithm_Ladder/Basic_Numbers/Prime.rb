@@ -1,6 +1,6 @@
 # Write a function that returns whether a given number is a prime number.
 
-# prime number = # that can evenly be divided by 2; it can only be divided by 1 and itself
+# prime number = # that can't evenly be divided by 2; it can only be divided by 1 and itself
 
 # function -> number
 
@@ -24,3 +24,13 @@ def prime(number)
 end
 
 p prime(1)
+p prime(2)
+p prime(3)
+p prime(4)
+p prime(5)
+p prime(6)
+p prime(7)
+p prime(8)
+p prime(9)
+p prime(10)
+p prime(11)

@@ -14,11 +14,8 @@ def palindrome(string)
     new_str += string[i]
     i -= 1
   end
-  if new_str == string
-    return true
-  else
-    return false
-  end
+
+  return new_str == string
 end
 
 p palindrome("racecar")
